@@ -13,4 +13,4 @@ class Turnos:
         self.hora = hora
     
     def arregla_texto(devuelve):
-        return f"Fecha : {devuelve.fecha} | Hora: {self.hora} | Paciente: {self.paciente}"
+        return f"Fecha : {devuelve.fecha} | Hora: {devuelve.hora} | Paciente: {devuelve.paciente}"
