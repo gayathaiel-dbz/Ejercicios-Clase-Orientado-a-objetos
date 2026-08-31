@@ -3,5 +3,5 @@ class Paciente:
         self.nombre = nombre
         self.dni = dni
         
-    def devuelve_estado(devuelve):
+    def arregla_texto(devuelve):
         return f"{devuelve.nombre} (DNI: {devuelve.dni})"
