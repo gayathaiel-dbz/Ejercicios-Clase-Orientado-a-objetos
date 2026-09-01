@@ -26,7 +26,7 @@ class Agenda:
             if t.fecha == nuevo_turno.fecha and t.hora == nuevo_turno.hora:
                 print(f"Error: El horario {nuevo_turno.fecha} a las {nuevo_turno.hora} ya está ocupado.")
                 return
-
+       
         self.turnos.append(nuevo_turno)
         print(f"Turno agendado con éxito para {nuevo_turno.paciente.nombre}")
 
@@ -39,3 +39,13 @@ class Agenda:
 
         for t in self.turnos:
             print(t.arregla_texto())
+            
+agenda = Agenda()
+nombre = input("Ingrese el nobmre del paciente: ")
+dni = input("Ingrese el DNI: ")
+fecha = input("Ingrese la fecha del turno: ")
+hora = input("Ingrese la hora del turno: ")
+paciente = Paciente(nombre, dni)
+turno = Turnos(paciente, fecha, hora)
+agenda.agregar_turno(turno)
+agenda.listar_turnos()
