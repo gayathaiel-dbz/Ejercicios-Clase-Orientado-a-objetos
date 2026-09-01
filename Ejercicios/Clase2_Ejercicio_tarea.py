@@ -14,3 +14,13 @@ class Turnos:
     
     def arregla_texto(devuelve):
         return f"Fecha : {devuelve.fecha} | Hora: {devuelve.hora} | Paciente: {devuelve.paciente}"
+    
+class Agenda: 
+    def _init_(self):
+        self.turnos
+        
+    def agregar_turno(self, nuevo_turno):
+        for t in self.turnos:
+            if t.fecha == nuevo_turno.fecha and t.hora == nuevo_turno.hora: 
+                print(f" Error: El horario {nuevo_turno.fecha} a las {nuevo_turno.hora}")
+                return 
