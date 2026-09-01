@@ -24,3 +24,16 @@ class Agenda:
             if t.fecha == nuevo_turno.fecha and t.hora == nuevo_turno.hora: 
                 print(f" Error: El horario {nuevo_turno.fecha} a las {nuevo_turno.hora}")
                 return 
+        
+        self.turnos.append(nuevo_turno)
+        print(f"Turno agendado con exito para {nuevo_turno.paciente.nombre}")
+    
+    def listar_turnos(self):
+        print("Turnos registrados en la agenda")
+        if len(self.turnos) == 0:
+            print("No hay turnos")
+            return
+        
+        for t in self.turnos:
+            print(t.arregla_texto())
+            
