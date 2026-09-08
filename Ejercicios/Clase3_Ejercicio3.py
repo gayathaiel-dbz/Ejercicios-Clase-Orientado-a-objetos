@@ -12,3 +12,11 @@ class Programador(Empleado):
 class Diseñador(Empleado):
     def trabajar(self):
         return f"{self.nombre} esta diseñando interfaces"
+
+empleado = Empleado("Juanma")
+programador = Programador("Lukitas")
+diseñador = Diseñador("Juancho")
+
+print(empleado.trabajar())
+print(programador.trabajar())
+print(diseñador.trabajar())
