@@ -27,3 +27,9 @@ class Arquero(Personajes):
     
     def atacar(self):
         print(f"{self.nombre} (Arquero) ataca con flecha")
+
+print("Simulacion")
+equipo = [Guerrero("Mordred"), Mago("Tamamo"), Arquero("Robin Hood")]
+
+for personajes in equipo:
+    personajes.atacar()
